@@ -38,15 +38,16 @@ void VideodrommMappingApp::setup() {
 #if (defined( CINDER_MSW )|| defined( CINDER_MAC ))
 	mVDSession = VDSession::create(mVDSettings);
 #endif
+	mVDSettings->mStandalone = true;
 	mVDSession->getWindowsResolution();
 	setWindowSize(mVDSettings->mRenderWidth, mVDSettings->mRenderHeight);
 
 	mVDSettings->iResolution.x = mVDSettings->mRenderWidth;
 	mVDSettings->iResolution.y = mVDSettings->mRenderHeight;
+	mVDSettings->mRenderPosXY = ivec2(mVDSettings->mRenderX, mVDSettings->mRenderY);
 	// UI
 	mVDUI = VDUI::create(mVDSettings, mVDSession);
 	setFrameRate(mVDSession->getTargetFps());
-
 
 	mFadeInDelay = true;
 
@@ -58,6 +59,7 @@ void VideodrommMappingApp::setup() {
 	mUIFbo = gl::Fbo::create(1000, 800, format.colorTexture());
 
 	// mouse cursor and ui
+	mVDSettings->mCursorVisible = false;
 	setUIVisibility(mVDSettings->mCursorVisible);
 }
 
@@ -135,11 +137,8 @@ void VideodrommMappingApp::keyUp(KeyEvent event)
 
 void VideodrommMappingApp::update()
 {
-	mVDSettings->iFps = getAverageFps();
-	mVDSettings->sFps = toString(floor(mVDSettings->iFps));
+	mVDSession->setControlValue(30, getAverageFps());
 	mVDSession->update();
-
-
 }
 void VideodrommMappingApp::fileDrop(FileDropEvent event)
 {
@@ -172,11 +171,6 @@ void VideodrommMappingApp::renderUIToFbo()
 		gl::ScopedViewport scpVp(ivec2(0), ivec2(mVDSettings->mFboWidth * mVDSettings->mUIZoom, mVDSettings->mFboHeight * mVDSettings->mUIZoom));
 		gl::clear();
 		gl::color(Color::white());
-
-		//gl::draw(mUIFbo->getColorTexture());
-		/*gl::draw(mMixes[0]->getTexture(), Rectf(384, 128, 512, 256));
-		gl::draw(mMixes[0]->getTexture(1), Rectf(512, 128, 640, 256));
-		gl::draw(mMixes[0]->getTexture(2), Rectf(640, 128, 768, 256));*/
 	}
 	//}
 	mVDUI->Run("UI", (int)getAverageFps());
@@ -186,7 +180,7 @@ void VideodrommMappingApp::draw()
 {
 	getWindow()->setTitle("(" + mVDSettings->sFps + " fps) " + toString(mVDSettings->iBeat) + " Videodromm");
 
-	/* TODO check for single screen*/
+	gl::clear(Color::black());
 	if (mFadeInDelay) {
 		mVDSettings->iAlpha = 0.0f;
 		if (getElapsedFrames() > mVDSession->getFadeInDelay()) {
@@ -196,10 +190,8 @@ void VideodrommMappingApp::draw()
 			timeline().apply(&mVDSettings->iAlpha, 0.0f, 1.0f, 1.5f, EaseInCubic());
 		}
 	}
-	gl::clear(Color::black());
 	gl::setMatricesWindow(mVDSettings->mRenderWidth, mVDSettings->mRenderHeight, false);
-
-	gl::draw(mVDSession->getRenderTexture());
+	gl::draw(mVDSession->getMixTexture(), getWindowBounds());
 
 	//imgui
 	if (!mVDSettings->mCursorVisible || Warp::isEditModeEnabled())
