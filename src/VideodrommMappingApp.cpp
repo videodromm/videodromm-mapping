@@ -137,7 +137,7 @@ void VideodrommMappingApp::keyUp(KeyEvent event)
 
 void VideodrommMappingApp::update()
 {
-	mVDSession->setControlValue(30, getAverageFps());
+	mVDSession->setControlValue(20, getAverageFps());
 	mVDSession->update();
 }
 void VideodrommMappingApp::fileDrop(FileDropEvent event)
