@@ -73,7 +73,6 @@ void VideodrommMappingApp::cleanup() {
 
 void VideodrommMappingApp::resize() {
 	mVDUI->resize();
-	mVDSession->resize();
 }
 
 void VideodrommMappingApp::mouseMove(MouseEvent event)
@@ -187,11 +186,13 @@ void VideodrommMappingApp::draw()
 			mFadeInDelay = false;
 			setWindowSize(mVDSettings->mRenderWidth, mVDSettings->mRenderHeight);
 			setWindowPos(ivec2(mVDSettings->mRenderX, mVDSettings->mRenderY));
+			// warps resize at the end
+			mVDSession->resize();
 			timeline().apply(&mVDSettings->iAlpha, 0.0f, 1.0f, 1.5f, EaseInCubic());
 		}
 	}
 	gl::setMatricesWindow(mVDSettings->mRenderWidth, mVDSettings->mRenderHeight, false);
-	gl::draw(mVDSession->getMixTexture(), getWindowBounds());
+	gl::draw(mVDSession->getRenderTexture(), getWindowBounds());
 
 	//imgui
 	if (!mVDSettings->mCursorVisible || Warp::isEditModeEnabled())
