@@ -79,15 +79,6 @@
     <Filter Include="Blocks\OSC\src">
       <UniqueIdentifier>{CBE1BD7D-C7E8-4E77-9A37-BE81B7A750B6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Blocks\UnionJack">
-      <UniqueIdentifier>{94A09E23-B376-4681-B274-2EA183DD635E}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Blocks\UnionJack\include">
-      <UniqueIdentifier>{41787C0D-A2AD-47AD-8FA8-341CB1DC3717}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Blocks\UnionJack\src">
-      <UniqueIdentifier>{D55C47E1-C43C-4154-A2E3-991F0A0DDD00}</UniqueIdentifier>
-    </Filter>
     <Filter Include="assets">
       <UniqueIdentifier>{752521a1-6f53-4def-8c99-e218dd93d1db}</UniqueIdentifier>
     </Filter>
@@ -276,12 +267,6 @@
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-WebSocketPP\src\WebSocketServer.h">
       <Filter>Blocks\Cinder-WebSocketPP\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Cinder\blocks\UnionJack\include\UnionJack.h">
-      <Filter>Blocks\UnionJack\include</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\..\Cinder\blocks\UnionJack\src\UnionJack.cpp">
-      <Filter>Blocks\UnionJack\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDConsole.cpp">
       <Filter>Blocks\Videodromm\src</Filter>
     </ClCompile>
