@@ -201,7 +201,8 @@ void VideodrommMappingApp::draw()
 	}
 	renderUIToFbo();
 	gl::draw(mUIFbo->getColorTexture());
-
+	gl::color(1.0, 0.0, 0.0, 1.0);
+	gl::drawSolidTriangle(vec2(0.5,0.5), vec2(0.3,0.7), vec2(0.9,0.7));
 }
 
 // If you're deploying to iOS, set the Render antialiasing to 0 for a significant
