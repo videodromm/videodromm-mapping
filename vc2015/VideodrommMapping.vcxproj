@@ -125,6 +125,7 @@
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDMix.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDShader.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDTexture.h" />
+    <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDTriangle.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUI.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUIAnimation.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUIAudio.h" />
@@ -139,6 +140,7 @@
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUIShaders.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUITempo.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUITextures.h" />
+    <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUITriangles.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUIWarps.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUIWebsockets.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDWebsocket.h" />
@@ -182,6 +184,7 @@
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDMix.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDShader.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDTexture.cpp" />
+    <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDTriangle.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUI.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUIAnimation.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUIAudio.cpp" />
@@ -196,6 +199,7 @@
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUIShaders.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUITempo.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUITextures.cpp" />
+    <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUITriangles.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUIWarps.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUIWebsockets.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDWebsocket.cpp" />
