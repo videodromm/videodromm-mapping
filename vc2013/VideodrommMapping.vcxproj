@@ -134,6 +134,7 @@
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUIMidi.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUIMouse.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUIOsc.h" />
+    <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUIRender.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUIShaders.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUITempo.h" />
     <ClInclude Include="..\..\..\Cinder\blocks\Cinder-Videodromm\include\VDUITextures.h" />
@@ -185,6 +186,7 @@
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUIMidi.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUIMouse.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUIOsc.cpp" />
+    <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUIRender.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUIShaders.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUITempo.cpp" />
     <ClCompile Include="..\..\..\Cinder\blocks\Cinder-Videodromm\src\VDUITextures.cpp" />

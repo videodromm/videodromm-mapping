@@ -42,8 +42,6 @@ void VideodrommMappingApp::setup() {
 	mVDSession->getWindowsResolution();
 	setWindowSize(mVDSettings->mRenderWidth, mVDSettings->mRenderHeight);
 
-	mVDSettings->iResolution.x = mVDSettings->mRenderWidth;
-	mVDSettings->iResolution.y = mVDSettings->mRenderHeight;
 	mVDSettings->mRenderPosXY = ivec2(mVDSettings->mRenderX, mVDSettings->mRenderY);
 	// UI
 	mVDUI = VDUI::create(mVDSettings, mVDSession);
