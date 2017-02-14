@@ -134,7 +134,7 @@ void VideodrommMappingApp::keyUp(KeyEvent event)
 
 void VideodrommMappingApp::update()
 {
-	mVDSession->setControlValue(mVDSettings->IFPS, getAverageFps());
+	mVDSession->setFloatUniformValueByIndex(mVDSettings->IFPS, getAverageFps());
 	mVDSession->update();
 }
 void VideodrommMappingApp::fileDrop(FileDropEvent event)
